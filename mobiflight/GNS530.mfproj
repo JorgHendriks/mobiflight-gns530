@@ -1,0 +1,694 @@
+{
+  "Name": "GNS530",
+  "ConfigFiles": [
+    {
+      "Label": "GNS530",
+      "FileName": null,
+      "ReferenceOnly": false,
+      "EmbedContent": true,
+      "ConfigItems": [
+        {
+          "Source": {
+            "MobiFlightVariable": {
+              "TYPE": "number",
+              "Name": "LED_PWM",
+              "Number": 0.0,
+              "Text": "",
+              "Expression": "$"
+            },
+            "Type": "VariableSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 64.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "LED_PWM",
+            "Pin": "LED_PWM",
+            "Brightness": 255,
+            "PwmMode": true,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "LED_PWM",
+          "GUID": "8d112b7d-c950-4358-9e42-ca9169a6095a",
+          "Active": true,
+          "Name": "LED_OUT",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Type": "VariableInputAction",
+              "Variable": {
+                "TYPE": "number",
+                "Name": "LED_PWM",
+                "Number": -8.0,
+                "Text": "-8",
+                "Expression": "$-8"
+              }
+            },
+            "onLeftFast": null,
+            "onRight": {
+              "Type": "VariableInputAction",
+              "Variable": {
+                "TYPE": "number",
+                "Name": "LED_PWM",
+                "Number": 8.0,
+                "Text": "8",
+                "Expression": "$+8"
+              }
+            },
+            "onRightFast": null
+          },
+          "Device": {
+            "Type": "Encoder",
+            "Name": "RE_COM"
+          },
+          "DeviceType": "Encoder",
+          "DeviceName": "RE_COM",
+          "GUID": "65204085-f3dd-4995-b877-27eff45bf0c7",
+          "Active": true,
+          "Name": "LED_Brightness",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_RightSmallKnob_Left)",
+              "PresetId": "115b2bd4-5c2e-43a5-ad0c-0297e8023454"
+            },
+            "onLeftFast": null,
+            "onRight": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_RightSmallKnob_Right)",
+              "PresetId": "c3962792-4a50-487a-aaba-c8b5ba16f354"
+            },
+            "onRightFast": null
+          },
+          "Device": {
+            "Type": "Encoder",
+            "Name": "RE_GPS1_HI"
+          },
+          "DeviceType": "Encoder",
+          "DeviceName": "RE_GPS1_HI",
+          "GUID": "a2566820-092f-450c-a495-be7d71f204ae",
+          "Active": true,
+          "Name": "RE_RIGHT_HI",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_RightLargeKnob_Left)",
+              "PresetId": "cc371db9-05b3-45e9-8700-7841ddae3f2a"
+            },
+            "onLeftFast": null,
+            "onRight": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_RightLargeKnob_Right)",
+              "PresetId": "ce4dd394-2599-4602-a42c-1f09271b8825"
+            },
+            "onRightFast": null
+          },
+          "Device": {
+            "Type": "Encoder",
+            "Name": "RE_GPS1_LO"
+          },
+          "DeviceType": "Encoder",
+          "DeviceName": "RE_GPS1_LO",
+          "GUID": "bac6ec9c-1369-4c0a-85d3-e6c1e16dd12d",
+          "Active": true,
+          "Name": "RE_RIGHT_LO",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "inputShiftRegister": {
+            "ExtPin": 7,
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_RightSmallKnob_Push)",
+              "PresetId": "07ff4423-26c6-4612-a9c9-c4068b2b1c21"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "SubIndex": 7,
+            "Type": "InputShiftRegister",
+            "Name": "InputShifter"
+          },
+          "DeviceType": "InputShiftRegister",
+          "DeviceName": "InputShifter",
+          "GUID": "c5e4ac2e-9f86-4cc1-b349-24150d029eee",
+          "Active": true,
+          "Name": "RE_RIGHT_PUSH",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_LeftLargeKnob_Left)",
+              "PresetId": "05518a2f-5e17-4bae-ac90-dc5517d26277"
+            },
+            "onLeftFast": null,
+            "onRight": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_LeftLargeKnob_Right)",
+              "PresetId": "defaf8fa-8018-4e70-8a7d-86e533b253f7"
+            },
+            "onRightFast": null
+          },
+          "Device": {
+            "Type": "Encoder",
+            "Name": "RE_COM_VLOC_LO"
+          },
+          "DeviceType": "Encoder",
+          "DeviceName": "RE_COM_VLOC_LO",
+          "GUID": "f5c0d90e-686d-489b-9843-938c712ff620",
+          "Active": true,
+          "Name": "RE_LEFT_LO",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_LeftSmallKnob_Left)",
+              "PresetId": "54c9fbef-275b-4c8f-8357-c921d5c717b2"
+            },
+            "onLeftFast": null,
+            "onRight": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_LeftSmallKnob_Right)",
+              "PresetId": "f27546e8-b061-464c-8509-f9e7e884e161"
+            },
+            "onRightFast": null
+          },
+          "Device": {
+            "Type": "Encoder",
+            "Name": "RE_COM_VLOC_HI"
+          },
+          "DeviceType": "Encoder",
+          "DeviceName": "RE_COM_VLOC_HI",
+          "GUID": "6a89dca6-7363-4b34-a1a8-b7f57c4855bd",
+          "Active": true,
+          "Name": "RE_LEFT_HI",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "inputShiftRegister": {
+            "ExtPin": 0,
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_LeftSmallKnob_Push)",
+              "PresetId": "f0260cd1-9089-4595-893d-a2b8686f2fa1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "SubIndex": 0,
+            "Type": "InputShiftRegister",
+            "Name": "InputShifter"
+          },
+          "DeviceType": "InputShiftRegister",
+          "DeviceName": "InputShifter",
+          "GUID": "61fa1cf0-02ce-4f3f-8b1f-cd180478aa10",
+          "Active": true,
+          "Name": "RE_LEFT_PUSH",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_COMSWAP_Push)",
+              "PresetId": "68675bb4-602b-4228-8866-1e0e24f46965"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "SW_COM"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "SW_COM",
+          "GUID": "d8117754-8516-4725-9c19-4299bc460d35",
+          "Active": true,
+          "Name": "SW_COM",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_NAVSWAP_Push)",
+              "PresetId": "9f0c963a-4940-4876-a8af-7cb60a1b9f51"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "SW_NAV"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "SW_NAV",
+          "GUID": "fae0a82e-0687-4cba-9230-a328a7cb8aa7",
+          "Active": true,
+          "Name": "SW_NAV",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "inputShiftRegister": {
+            "ExtPin": 1,
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_CDI_Push)",
+              "PresetId": "74d557fa-7e41-4cd4-ac0a-07054836557a"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "SubIndex": 1,
+            "Type": "InputShiftRegister",
+            "Name": "InputShifter"
+          },
+          "DeviceType": "InputShiftRegister",
+          "DeviceName": "InputShifter",
+          "GUID": "28a182d1-e713-4fda-b0c1-a0479fa158dd",
+          "Active": true,
+          "Name": "SW_CDI",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "inputShiftRegister": {
+            "ExtPin": 2,
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_OBS_Push)",
+              "PresetId": "3d7ad856-adcc-4fc4-9c0c-c8c669439116"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "SubIndex": 2,
+            "Type": "InputShiftRegister",
+            "Name": "InputShifter"
+          },
+          "DeviceType": "InputShiftRegister",
+          "DeviceName": "InputShifter",
+          "GUID": "44f887f9-1328-4d65-9912-56be3c5381c6",
+          "Active": true,
+          "Name": "SW_OBS",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "inputShiftRegister": {
+            "ExtPin": 3,
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_MSG_Push)",
+              "PresetId": "33f2e276-9327-49ee-87e5-fc6aac074656"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "SubIndex": 3,
+            "Type": "InputShiftRegister",
+            "Name": "InputShifter"
+          },
+          "DeviceType": "InputShiftRegister",
+          "DeviceName": "InputShifter",
+          "GUID": "a59ef0d0-dc30-42b1-95a0-f790225506b5",
+          "Active": true,
+          "Name": "SW_MSG",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "inputShiftRegister": {
+            "ExtPin": 4,
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_FPL_Push)",
+              "PresetId": "e2d52825-f506-4df6-a08f-ededf6320314"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "SubIndex": 4,
+            "Type": "InputShiftRegister",
+            "Name": "InputShifter"
+          },
+          "DeviceType": "InputShiftRegister",
+          "DeviceName": "InputShifter",
+          "GUID": "b2a58300-c8ac-4021-a410-a18e9c24a33a",
+          "Active": true,
+          "Name": "SW_FPL",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "inputShiftRegister": {
+            "ExtPin": 5,
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_VNAV_Push)",
+              "PresetId": "05fef90a-d70d-4b7a-8b2c-0dddce861212"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "SubIndex": 5,
+            "Type": "InputShiftRegister",
+            "Name": "InputShifter"
+          },
+          "DeviceType": "InputShiftRegister",
+          "DeviceName": "InputShifter",
+          "GUID": "ecc84ce4-2611-4250-b695-b742b2aaf753",
+          "Active": true,
+          "Name": "SW_VNAV",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "inputShiftRegister": {
+            "ExtPin": 6,
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_PROC_Push)",
+              "PresetId": "86fe165a-ddb9-4657-862f-d2b0fb3a6816"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "SubIndex": 6,
+            "Type": "InputShiftRegister",
+            "Name": "InputShifter"
+          },
+          "DeviceType": "InputShiftRegister",
+          "DeviceName": "InputShifter",
+          "GUID": "ed8572fe-0289-4378-a433-9105fc51fb1a",
+          "Active": true,
+          "Name": "SW_PROC",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_ENT_Push)",
+              "PresetId": "307f9eed-94f8-41d0-b169-83d00d9a4f2f"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "SW_ENT"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "SW_ENT",
+          "GUID": "13ffe65b-eb7f-420f-8a5e-990b91bff611",
+          "Active": true,
+          "Name": "SW_ENT",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_CLR_Push)",
+              "PresetId": "96dec0cd-5aac-46a9-8def-741869273cfc"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "SW_CLR"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "SW_CLR",
+          "GUID": "cff331c8-cda6-44f1-a987-7f89e5228abe",
+          "Active": true,
+          "Name": "SW_CLR",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_MENU_Push)",
+              "PresetId": "6af12162-8455-4f53-ad22-8fd6bb82c8f2"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "SW_MENU"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "SW_MENU",
+          "GUID": "55957f80-3e64-4f11-89dc-fb8af95e0414",
+          "Active": true,
+          "Name": "SW_MENU",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_DirectTo_Push)",
+              "PresetId": "3ae5605a-c023-4b7a-bf8e-11312b6d1986"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "SW_DCT"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "SW_DCT",
+          "GUID": "7ef55958-5642-4340-bc1b-53e577b53b6e",
+          "Active": true,
+          "Name": "SW_DCT",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_RNG_Zoom)",
+              "PresetId": "4bed29e5-ec89-472d-afa4-29d21431857e"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "SW_RNG_D"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "SW_RNG_D",
+          "GUID": "a9dc5011-4dd5-4017-b45b-667288ce8a33",
+          "Active": true,
+          "Name": "SW_RNG_ZOOM",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_RNG_Dezoom)",
+              "PresetId": "98cce1bc-318d-4bd4-a378-919c875aa564"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "SW_RNG_UP"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "SW_RNG_UP",
+          "GUID": "be135100-fc52-4a9a-ae13-d125502bc9d2",
+          "Active": true,
+          "Name": "SW_RNG_DEZOOM",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "GNS530",
+            "Serial": "SN-E66540F0A391852D"
+          }
+        }
+      ]
+    }
+  ],
+  "Sim": "msfs",
+  "Aircraft": [],
+  "Features": {
+    "FSUIPC": false,
+    "ProSim": false
+  },
+  "_version": "0.9"
+}

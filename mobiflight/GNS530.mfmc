@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ModuleType>MobiFlight RaspiPico</ModuleType>
+  <ModuleName>GNS530</ModuleName>
+  <PowerSavingTime>600</PowerSavingTime>
+  <Button Name="SW_COM" Pin="15" />
+  <Button Name="SW_NAV" Pin="11" />
+  <Button Name="SW_RNG_UP" Pin="16" />
+  <Button Name="SW_RNG_D" Pin="17" />
+  <Button Name="SW_DCT" Pin="18" />
+  <Button Name="SW_MENU" Pin="19" />
+  <Button Name="SW_CLR" Pin="20" />
+  <Button Name="SW_ENT" Pin="21" />
+  <Button Name="RE_COM_PUSH" Pin="12" />
+  <Button Name="RE_NAV_PUSH" Pin="10" />
+  <InputShiftRegister Name="InputShifter" LatchPin="1" ClockPin="2" DataPin="0" NumModules="1" />
+  <Encoder Name="RE_COM" PinLeft="13" PinRight="14" EncoderType="2" />
+  <Encoder Name="RE_NAV" PinLeft="8" PinRight="9" EncoderType="2" />
+  <Encoder Name="RE_COM_VLOC_HI" PinLeft="7" PinRight="5" EncoderType="2" />
+  <Encoder Name="RE_COM_VLOC_LO" PinLeft="3" PinRight="4" EncoderType="2" />
+  <Encoder Name="RE_GPS1_HI" PinLeft="26" PinRight="22" EncoderType="2" />
+  <Encoder Name="RE_GPS1_LO" PinLeft="28" PinRight="27" EncoderType="2" />
+  <Output Name="LED_PWM" Pin="6" />
+</Config>

@@ -1,0 +1,17 @@
+# KiCad local and generated files
+*.kicad_prl
+*-backups/
+~*.lck
+*.kicad_sch-bak
+*.kicad_pcb-bak
+pcb/out/
+fp-info-cache
+
+# FreeCAD backup files
+*.FCBak
+
+# Slicer and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
